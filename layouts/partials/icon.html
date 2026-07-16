@@ -1,0 +1,36 @@
+{{- $name := . -}}
+{{- if eq $name "email" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M3.75 5.75h16.5v12.5H3.75z" />
+  <path d="m4.5 6.5 7.5 6 7.5-6" />
+</svg>
+{{- else if eq $name "linkedin" -}}
+<svg class="brand-icon brand-icon--linkedin" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.119 20.452H3.555V9H7.12v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z" />
+</svg>
+{{- else if eq $name "scholar" -}}
+<svg class="brand-icon brand-icon--scholar" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M12 24a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM12 0 0 9.5l4.84 3.94A7.99 7.99 0 0 1 12 9c2.88 0 5.4 1.52 6.81 3.8L24 8.67 12 0z" />
+</svg>
+{{- else if eq $name "orcid" -}}
+<svg class="brand-icon brand-icon--orcid" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.197 5.788c.682 0 1.235.554 1.235 1.235 0 .682-.553 1.236-1.235 1.236-.683 0-1.236-.554-1.236-1.236 0-.681.553-1.235 1.236-1.235zm-.955 3.402h1.911v6.142H6.242V9.19zm3.033-3.402h3.656c3.419 0 4.917 2.444 4.917 5.772 0 3.093-1.498 5.772-4.917 5.772H9.275V5.788zm1.912 1.729v8.087h1.53c2.847 0 3.128-2.159 3.128-4.044 0-2.008-.281-4.043-3.128-4.043h-1.53z" />
+</svg>
+{{- else if eq $name "arrow" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M5 12h14M13 6l6 6-6 6" />
+</svg>
+{{- else if eq $name "spark" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="M12 2.75c.5 5.85 3.4 8.75 9.25 9.25-5.85.5-8.75 3.4-9.25 9.25C11.5 15.4 8.6 12.5 2.75 12 8.6 11.5 11.5 8.6 12 2.75Z" />
+</svg>
+{{- else if eq $name "copy" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <rect x="8" y="8" width="11" height="11" rx="2" />
+  <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" />
+</svg>
+{{- else if eq $name "chevron" -}}
+<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+  <path d="m7 9 5 5 5-5" />
+</svg>
+{{- end -}}

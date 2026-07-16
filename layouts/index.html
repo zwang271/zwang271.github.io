@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ee6a22">
+  <title>{{ site.Title }} · Formal Methods &amp; Temporal Logic</title>
+  <meta name="description" content="{{ site.Params.description }}">
+  <link rel="canonical" href="{{ site.BaseURL }}">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ site.Title }} · Formal Methods &amp; Temporal Logic">
+  <meta property="og:description" content="{{ site.Params.description }}">
+  <meta property="og:url" content="{{ site.BaseURL }}">
+  <meta property="og:image" content="{{ "images/zili-wang.jpg" | absURL }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  {{- $styles := resources.Get "css/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+
+  {{- $person := dict
+    "@context" "https://schema.org"
+    "@type" "Person"
+    "name" site.Data.profile.name
+    "alternateName" site.Data.profile.native_name
+    "url" site.BaseURL
+    "image" ("images/zili-wang.jpg" | absURL)
+    "jobTitle" "Computer Science PhD Student"
+    "affiliation" (dict "@type" "CollegeOrUniversity" "name" "Iowa State University")
+    "sameAs" (slice site.Data.profile.linkedin site.Data.profile.scholar site.Data.profile.orcid)
+  -}}
+  <script type="application/ld+json">{{ $person | jsonify | safeJS }}</script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell site-header__inner">
+      <a class="brand" href="#top" aria-label="Zili Wang, home">
+        <span class="brand__mark" aria-hidden="true">Z</span>
+        <span class="brand__name">Zili Wang</span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Latest work</a>
+        <a href="#publications">Publications</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero__copy">
+        <p class="eyebrow"><span></span> Formal methods · AI · Temporal logic</p>
+        <h1 id="hero-title">Zili <em>Wang.</em></h1>
+        <p class="hero__native" lang="zh">汪自立</p>
+        <p class="hero__lede">I build practical tools for formal methods and prove the algorithms behind them correct.</p>
+
+        <div class="socials" aria-label="Contact and research profiles">
+          <a class="social-link social-link--email" href="mailto:{{ site.Data.profile.email }}" aria-label="Email Zili Wang" title="Email">
+            {{ partial "icon.html" "email" }}
+          </a>
+          <a class="social-link social-link--linkedin" href="{{ site.Data.profile.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="Zili Wang on LinkedIn" title="LinkedIn">
+            {{ partial "icon.html" "linkedin" }}
+          </a>
+          <a class="social-link social-link--scholar" href="{{ site.Data.profile.scholar }}" target="_blank" rel="noopener noreferrer" aria-label="Zili Wang on Google Scholar" title="Google Scholar">
+            {{ partial "icon.html" "scholar" }}
+          </a>
+          <a class="social-link social-link--orcid" href="{{ site.Data.profile.orcid }}" target="_blank" rel="noopener noreferrer" aria-label="Zili Wang on ORCID" title="ORCID">
+            {{ partial "icon.html" "orcid" }}
+          </a>
+        </div>
+      </div>
+
+      <figure class="portrait">
+        <div class="portrait__accent" aria-hidden="true"></div>
+        <div class="portrait__frame">
+          <img src="{{ "images/zili-wang.jpg" | relURL }}" width="1280" height="1278" alt="Portrait of Zili Wang">
+        </div>
+        <figcaption>
+          <span class="portrait__status" aria-hidden="true"></span>
+          Fourth-year PhD student · Cedar Rapids, Iowa
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="about section shell" id="about" aria-labelledby="about-title">
+      <div class="section-label">About</div>
+      <div class="about__content">
+        <h2 id="about-title">Making formal methods more usable—and more trustworthy.</h2>
+        <div class="about__grid">
+          <div>
+            <p>I’m a fourth-year Computer Science PhD student at <a href="{{ site.Data.profile.iowa_state }}" target="_blank" rel="noopener noreferrer">Iowa State University</a>, advised by <a href="{{ site.Data.profile.advisor }}" target="_blank" rel="noopener noreferrer">Kristin Yvonne Rozier</a> in the <a href="{{ site.Data.profile.lab }}" target="_blank" rel="noopener noreferrer">Laboratory for Temporal Logic</a>.</p>
+            <p>My research sits at the intersection of formal methods and artificial intelligence. I develop tools and algorithms for temporal logic, with a particular focus on specification elicitation and validation, and formally verify key algorithms in Isabelle/HOL.</p>
+          </div>
+          <div>
+            <p>I’m supported by a <a href="{{ site.Data.profile.grfp }}" target="_blank" rel="noopener noreferrer">National Science Foundation Graduate Research Fellowship</a> (awarded 2024). Before Iowa State, I earned a double-major B.A. in Computer Science and Mathematics from <a href="{{ site.Data.profile.berkeley }}" target="_blank" rel="noopener noreferrer">UC Berkeley</a>.</p>
+          </div>
+        </div>
+
+        <div class="experience" aria-label="Previous internships">
+          <span class="experience__label">Previous internships</span>
+          <ul>
+            <li>NASA</li>
+            <li>Amazon</li>
+            <li>Collins Aerospace</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="work section shell" id="work" aria-labelledby="work-title">
+      <div class="section-label">Latest work</div>
+      <div class="spotlight">
+        <div class="spotlight__copy">
+          <p class="spotlight__kicker">The MLTL ecosystem</p>
+          <h2 id="work-title">One place to learn, write, and validate Mission-time LTL.</h2>
+          <p>I’m currently building an integrated ecosystem for Mission-time Linear Temporal Logic. It brings specification elicitation and validation tools together in a single, approachable site for researchers and practitioners.</p>
+          <a class="button" href="{{ site.Data.profile.mltl }}" target="_blank" rel="noopener noreferrer">
+            Explore the MLTL ecosystem
+            {{ partial "icon.html" "arrow" }}
+          </a>
+        </div>
+
+        <aside class="spotlight__paper" aria-label="Latest publication">
+          <div class="spotlight__paper-topline">
+            <span>Latest publication</span>
+            <span class="status-pill">Accepted · ISoLA 2026</span>
+          </div>
+          <h3>An Integrated Ecosystem for Mission-time LTL Specification Elicitation and Validation</h3>
+          <p><strong>Zili Wang</strong>, Alec Rosentrater, Alexis Aurandt, Christopher Johannsen, and Kristin Yvonne Rozier.</p>
+          <span class="spotlight__number" aria-hidden="true">MLTL / 26</span>
+        </aside>
+      </div>
+    </section>
+
+    <section class="publications section shell" id="publications" aria-labelledby="publications-title">
+      <div class="section-label">Publications</div>
+      <div class="publications__content">
+        <div class="section-heading">
+          <div>
+            <h2 id="publications-title">Publications</h2>
+            <p><sup>*</sup> Equal contribution.</p>
+          </div>
+          <a class="text-link" href="{{ site.Data.profile.scholar }}" target="_blank" rel="noopener noreferrer">
+            Google Scholar
+            {{ partial "icon.html" "arrow" }}
+          </a>
+        </div>
+
+        <div class="publication-list">
+          {{- range site.Data.publications.computer_science }}
+            {{ partial "publication.html" . }}
+          {{- end }}
+        </div>
+
+        <div class="publication-group-heading">
+          <div>
+            <span class="publication-group-heading__index">B</span>
+            <h3>Mathematics</h3>
+          </div>
+          <p>Authors are listed alphabetically, as is standard in mathematics.</p>
+        </div>
+
+        <div class="publication-list">
+          {{- range site.Data.publications.mathematics }}
+            {{ partial "publication.html" . }}
+          {{- end }}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell footer__inner">
+      <a href="mailto:{{ site.Data.profile.email }}">{{ site.Data.profile.email }}</a>
+      <p>© {{ now.Year }} Zili Wang</p>
+    </div>
+  </footer>
+
+  {{- $scripts := resources.Get "js/site.js" | minify | fingerprint }}
+  <script src="{{ $scripts.RelPermalink }}" integrity="{{ $scripts.Data.Integrity }}" defer></script>
+</body>
+</html>

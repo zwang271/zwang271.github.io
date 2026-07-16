@@ -1,0 +1,53 @@
+<article class="publication" id="publication-{{ .id }}">
+  <details class="publication__details">
+    <summary class="publication__summary">
+      <div class="publication__year">{{ .year }}</div>
+      <div class="publication__body">
+        <div class="publication__topline">
+          <span class="publication__area">{{ .area }}</span>
+          <span class="publication__expand-hint">
+            <span class="publication__hint-desktop publication__hint-closed">Click to expand abstract</span>
+            <span class="publication__hint-touch publication__hint-closed">Tap to expand abstract</span>
+            <span class="publication__hint-open">Hide abstract</span>
+            {{ partial "icon.html" "chevron" }}
+          </span>
+        </div>
+        <h3>{{ .title }}</h3>
+        <p class="publication__authors">
+          {{- range $index, $author := .authors -}}
+            {{- if $index }}, {{ end -}}
+            {{- if $author.self -}}<strong>{{ $author.name }}</strong>{{- else -}}{{ $author.name }}{{- end -}}
+            {{- if $author.equal -}}<sup title="Equal contribution">*</sup>{{- end -}}
+          {{- end -}}.
+        </p>
+        <p class="publication__venue">{{ .venue }}</p>
+      </div>
+    </summary>
+
+    <div class="publication__abstract">
+      <div aria-hidden="true"></div>
+      <div>
+        <span class="publication__abstract-label">Abstract</span>
+        <p>{{ .abstract }}</p>
+      </div>
+    </div>
+  </details>
+
+  <div class="publication__resources" aria-label="Resources for {{ .title }}">
+    {{- with .doi }}
+      <a class="publication__resource" href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ default "DOI" $.doi_label }}</a>
+    {{- else }}
+      <span class="publication__resource publication__resource--unavailable">{{ $.doi_status }}</span>
+    {{- end }}
+    <button class="publication__resource publication__bibtex-copy" type="button" data-bibtex-target="bibtex-{{ .id }}">
+      {{ partial "icon.html" "copy" }}
+      <span>BibTeX</span>
+    </button>
+    {{- range .resources }}
+      <a class="publication__resource" href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .label }}</a>
+    {{- end }}
+    <span class="publication__copy-status" aria-live="polite"></span>
+  </div>
+
+  <script id="bibtex-{{ .id }}" type="application/x-bibtex">{{ .bibtex | safeHTML }}</script>
+</article>

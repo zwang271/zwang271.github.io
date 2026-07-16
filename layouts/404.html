@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Page not found · {{ site.Title }}</title>
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  {{- $styles := resources.Get "css/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
+</head>
+<body class="error-page">
+  <main>
+    <p class="eyebrow"><span></span> 404</p>
+    <h1>That page isn’t here.</h1>
+    <p>The useful part of this site is all on one page.</p>
+    <a class="button" href="{{ site.Home.RelPermalink }}">Back to Zili’s homepage {{ partial "icon.html" "arrow" }}</a>
+  </main>
+</body>
+</html>

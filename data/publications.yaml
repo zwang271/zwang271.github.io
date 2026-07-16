@@ -1,0 +1,337 @@
+computer_science:
+  - id: mltl-ecosystem-isola-2026
+    year: "2026"
+    title: An Integrated Ecosystem for Mission-time LTL Specification Elicitation and Validation
+    area: Formal methods
+    authors:
+      - name: Zili Wang
+        self: true
+      - name: Alec Rosentrater
+      - name: Alexis Aurandt
+      - name: Christopher Johannsen
+      - name: Kristin Yvonne Rozier
+    venue: Accepted to the International Symposium on Leveraging Applications of Formal Methods, Verification and Validation (ISoLA), 2026.
+    doi_status: DOI forthcoming
+    abstract: >-
+      This work presents an integrated ecosystem for eliciting and validating Mission-time Linear Temporal Logic specifications. It brings complementary tools and workflows together so that users can move from informal requirements to formal specifications and check that those specifications capture the intended behavior.
+    bibtex: |-
+      @inproceedings{WangEtAl2026MLTLEcosystem,
+        author    = {Zili Wang and Alec Rosentrater and Alexis Aurandt and Christopher Johannsen and Kristin Yvonne Rozier},
+        title     = {An Integrated Ecosystem for Mission-time {LTL} Specification Elicitation and Validation},
+        booktitle = {International Symposium on Leveraging Applications of Formal Methods, Verification and Validation},
+        year      = {2026},
+        note      = {Accepted}
+      }
+    resources:
+      - label: MLTL Ecosystem
+        url: https://mltl.temporallogic.org/
+
+  - id: west-scp-2026
+    year: "2026"
+    title: "WEST: Interactive Validation of Mission-time Linear Temporal Logic (MLTL)"
+    area: Formal methods
+    authors:
+      - name: Zili Wang
+        self: true
+      - name: Laura P. Gamboa Guzman
+      - name: Kristin Y. Rozier
+    venue: Science of Computer Programming, vol. 248, article 103365, 2026.
+    doi: https://doi.org/10.1016/j.scico.2025.103365
+    abstract: >-
+      WEST is an interactive tool for validating MLTL specifications by visualizing the traces that satisfy a formula. The paper presents its command-line and graphical interfaces, five independent methods used to validate the implementation, and scalability results over several suites of randomly generated formulas.
+    bibtex: |-
+      @article{WangGamboaGuzmanRozier2026WEST,
+        author  = {Zili Wang and Laura P. Gamboa Guzman and Kristin Y. Rozier},
+        title   = {{WEST}: Interactive Validation of Mission-time Linear Temporal Logic ({MLTL})},
+        journal = {Science of Computer Programming},
+        volume  = {248},
+        pages   = {103365},
+        year    = {2026},
+        doi     = {10.1016/j.scico.2025.103365}
+      }
+    resources:
+      - label: Zenodo artifact
+        url: https://zenodo.org/records/14649154
+
+  - id: formula-progression-cicm-2025
+    year: "2025"
+    title: Formalizing MLTL Formula Progression in Isabelle/HOL
+    area: Formal methods
+    authors:
+      - name: Katherine Kosaian
+      - name: Zili Wang
+        self: true
+      - name: Elizabeth Sloan
+      - name: Kristin Yvonne Rozier
+    venue: In Proceedings of the Conference on Intelligent Computer Mathematics (CICM), pp. 371–391, 2025.
+    doi: https://doi.org/10.1007/978-3-032-07021-0_21
+    abstract: >-
+      This work formalizes MLTL syntax, semantics, and formula progression in Isabelle/HOL. It proves the progression algorithm correct, resolves errors and missing assumptions in prior presentations, and exports executable code that can support trustworthy formula evaluation and benchmark generation.
+    bibtex: |-
+      @inproceedings{KosaianEtAl2025FormulaProgression,
+        author    = {Katherine Kosaian and Zili Wang and Elizabeth Sloan and Kristin Yvonne Rozier},
+        title     = {Formalizing {MLTL} Formula Progression in {Isabelle/HOL}},
+        booktitle = {Intelligent Computer Mathematics},
+        series    = {Lecture Notes in Computer Science},
+        volume    = {16136},
+        pages     = {371--391},
+        year      = {2025},
+        doi       = {10.1007/978-3-032-07021-0_21}
+      }
+    resources:
+      - label: AFP formalization
+        url: https://isa-afp.org/entries/Mission_Time_LTL_Formula_Progression.html
+
+  - id: language-partitioning-nfm-2025
+    year: "2025"
+    title: Language Partitioning for Mission-time Linear Temporal Logic
+    area: Formal methods
+    authors:
+      - name: Alec Rosentrater
+        equal: true
+      - name: Zili Wang
+        self: true
+        equal: true
+      - name: Katherine Kosaian
+      - name: Kristin Yvonne Rozier
+    venue: In Proceedings of the NASA Formal Methods Symposium (NFM), pp. 313–332, 2025.
+    doi: https://doi.org/10.1007/978-3-031-93706-4_18
+    abstract: >-
+      This paper gives an algorithm that partitions the language of an MLTL formula into disjoint sublanguages represented by related formulas. The algorithm and its correctness proof are mechanized in Isabelle/HOL, exported to executable code, and evaluated experimentally.
+    bibtex: |-
+      @inproceedings{RosentraterEtAl2025LanguagePartitioning,
+        author    = {Alec Rosentrater and Zili Wang and Katherine Kosaian and Kristin Yvonne Rozier},
+        title     = {Language Partitioning for Mission-time Linear Temporal Logic},
+        booktitle = {NASA Formal Methods},
+        series    = {Lecture Notes in Computer Science},
+        volume    = {15682},
+        pages     = {313--332},
+        year      = {2025},
+        doi       = {10.1007/978-3-031-93706-4_18}
+      }
+    resources:
+      - label: AFP formalization
+        url: https://isa-afp.org/entries/Mission_Time_LTL_Language_Partition.html
+
+  - id: verified-regex-tacas-2025
+    year: "2025"
+    title: Formally Verifying a Transformation from MLTL Formulas to Regular Expressions
+    area: Formal methods
+    authors:
+      - name: Zili Wang
+        self: true
+      - name: Katherine Kosaian
+      - name: Kristin Yvonne Rozier
+    venue: In Proceedings of the International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS), pp. 254–275, 2025.
+    doi: https://doi.org/10.1007/978-3-031-90643-5_13
+    abstract: >-
+      This work mechanizes the WEST transformation from MLTL formulas to trace regular expressions and proves semantic equivalence in Isabelle/HOL. It also develops verified support for restricted regular-expression equivalence and uses exported code to validate the existing WEST implementation.
+    bibtex: |-
+      @inproceedings{WangKosaianRozier2025VerifiedRegex,
+        author    = {Zili Wang and Katherine Kosaian and Kristin Yvonne Rozier},
+        title     = {Formally Verifying a Transformation from {MLTL} Formulas to Regular Expressions},
+        booktitle = {Tools and Algorithms for the Construction and Analysis of Systems},
+        series    = {Lecture Notes in Computer Science},
+        volume    = {15696},
+        pages     = {254--275},
+        year      = {2025},
+        doi       = {10.1007/978-3-031-90643-5_13}
+      }
+    resources:
+      - label: AFP formalization
+        url: https://isa-afp.org/entries/Mission_Time_LTL_to_Regular_Expression.html
+
+  - id: responsible-ai-atm-2025
+    year: "2025"
+    title: "Responsible AI for Air Traffic Management: Application to Runway Configuration Assistance Tool"
+    area: Aerospace & AI
+    authors:
+      - name: Milad Memarzadeh
+      - name: Zili Wang
+        self: true
+      - name: Farzan Masrour Shalmani
+      - name: Pouria Razzaghi
+      - name: Krishna M. Kalyanam
+    venue: Aerospace, vol. 12, no. 10, article 872, 2025.
+    doi: https://doi.org/10.3390/aerospace12100872
+    abstract: >-
+      This paper studies responsible-AI considerations for air traffic management and applies a practical subset of them to a runway-configuration assistance tool. It examines how an AI decision-support system can be assessed and communicated in a safety-conscious operational setting.
+    bibtex: |-
+      @article{MemarzadehEtAl2025ResponsibleAI,
+        author  = {Milad Memarzadeh and Zili Wang and Farzan Masrour Shalmani and Pouria Razzaghi and Krishna M. Kalyanam},
+        title   = {Responsible {AI} for Air Traffic Management: Application to Runway Configuration Assistance Tool},
+        journal = {Aerospace},
+        volume  = {12},
+        number  = {10},
+        pages   = {872},
+        year    = {2025},
+        doi     = {10.3390/aerospace12100872}
+      }
+
+  - id: basic-syntax-cogsci-2024
+    year: "2024"
+    title: "Basic Syntax from Speech: Spontaneous Concatenation in Unsupervised Deep Neural Networks"
+    area: Machine learning
+    authors:
+      - name: Gašper Beguš
+      - name: Thomas Lu
+      - name: Zili Wang
+        self: true
+    venue: In Proceedings of the Annual Meeting of the Cognitive Science Society (CogSci), 2024.
+    doi: https://doi.org/10.48550/arXiv.2305.01626
+    doi_label: Preprint DOI
+    abstract: >-
+      Convolutional neural networks trained only on recordings of individual words spontaneously generate outputs containing two or three concatenated words. The study reproduces this behavior across models and datasets, finds novel word combinations, and discusses its implications for compositionality and models of syntax emerging directly from speech.
+    bibtex: |-
+      @inproceedings{BegusLuWang2024BasicSyntax,
+        author    = {Gašper Beguš and Thomas Lu and Zili Wang},
+        title     = {Basic Syntax from Speech: Spontaneous Concatenation in Unsupervised Deep Neural Networks},
+        booktitle = {Proceedings of the 46th Annual Meeting of the Cognitive Science Society},
+        year      = {2024},
+        url       = {https://escholarship.org/uc/item/1ks8q4q9}
+      }
+    resources:
+      - label: CogSci paper
+        url: https://escholarship.org/uc/item/1ks8q4q9
+
+  - id: treevada-icse-2024
+    year: "2024"
+    title: Fast Deterministic Black-box Context-free Grammar Inference
+    area: Software engineering
+    authors:
+      - name: Mohammad Rifat Arefin
+      - name: Suraj Shetiya
+      - name: Zili Wang
+        self: true
+      - name: Christoph Csallner
+    venue: In Proceedings of the IEEE/ACM 46th International Conference on Software Engineering (ICSE), article 117, pp. 1–12, 2024.
+    doi: https://doi.org/10.1145/3597503.3639214
+    abstract: >-
+      TreeVada makes black-box context-free grammar inference deterministic by pre-structuring sample programs according to common nesting rules and recursively applying learned rules. In experiments it runs faster and infers higher-quality grammars than the prior nondeterministic Arvada approach.
+    bibtex: |-
+      @inproceedings{ArefinEtAl2024TreeVada,
+        author    = {Mohammad Rifat Arefin and Suraj Shetiya and Zili Wang and Christoph Csallner},
+        title     = {Fast Deterministic Black-box Context-free Grammar Inference},
+        booktitle = {Proceedings of the 46th IEEE/ACM International Conference on Software Engineering},
+        pages     = {117:1--117:12},
+        year      = {2024},
+        doi       = {10.1145/3597503.3639214}
+      }
+    resources:
+      - label: Figshare artifact
+        url: https://doi.org/10.6084/m9.figshare.23907738
+
+  - id: mltl-validation-ifm-2023
+    year: "2023"
+    title: Mission-time LTL (MLTL) Formula Validation via Regular Expressions
+    area: Formal methods
+    authors:
+      - name: Jenna Elwing
+        equal: true
+      - name: Laura Gamboa
+      - name: Jeremy Sorkins
+        equal: true
+      - name: Chiara Travesset
+        equal: true
+      - name: Zili Wang
+        self: true
+        equal: true
+      - name: Kristin Rozier
+    venue: In Proceedings of the International Conference on Integrated Formal Methods (iFM), pp. 279–301, 2023.
+    doi: https://doi.org/10.1007/978-3-031-47705-8_15
+    abstract: >-
+      This paper characterizes the computations satisfying an MLTL formula using trace regular expressions and proves the construction sound and complete. It introduces an automated validation algorithm, studies its complexity, and evaluates an open-source implementation with a generated test suite and graphical interface.
+    bibtex: |-
+      @inproceedings{ElwingEtAl2023MLTLValidation,
+        author    = {Jenna Elwing and Laura Gamboa and Jeremy Sorkins and Chiara Travesset and Zili Wang and Kristin Rozier},
+        title     = {Mission-time {LTL} ({MLTL}) Formula Validation via Regular Expressions},
+        booktitle = {Integrated Formal Methods},
+        series    = {Lecture Notes in Computer Science},
+        volume    = {14300},
+        pages     = {279--301},
+        year      = {2023},
+        doi       = {10.1007/978-3-031-47705-8_15}
+      }
+    resources:
+      - label: Zenodo artifact
+        url: https://doi.org/10.5281/zenodo.8339325
+
+mathematics:
+  - id: permutation-orbits-ii-2023
+    year: "2023"
+    title: Finite Permutation Groups With Few Orbits Under the Action on the Power Set, II
+    area: Group theory
+    authors:
+      - name: Michael Gintz
+      - name: Matthew Kortje
+      - name: Megan Laurance
+      - name: Zili Wang
+        self: true
+      - name: Yong Yang
+    venue: Publicationes Mathematicae Debrecen, vol. 102, pp. 237–254, 2023.
+    doi: https://doi.org/10.5486/PMD.2023.9392
+    abstract: >-
+      This paper continues the classification of permutation groups by the number of orbits induced on a power set. It improves earlier theory and GAP algorithms to classify groups with n + r set-orbits for the previously unresolved range 16 through 33.
+    bibtex: |-
+      @article{GintzEtAl2023PermutationOrbitsII,
+        author  = {Michael Gintz and Matthew Kortje and Megan Laurance and Zili Wang and Yong Yang},
+        title   = {Finite Permutation Groups With Few Orbits Under the Action on the Power Set, {II}},
+        journal = {Publicationes Mathematicae Debrecen},
+        volume  = {102},
+        pages   = {237--254},
+        year    = {2023},
+        doi     = {10.5486/PMD.2023.9392}
+      }
+
+  - id: simple-groups-codegrees-2022
+    year: "2022"
+    title: On the Characterization of Some Non-abelian Simple Groups with Few Codegrees
+    area: Group theory
+    authors:
+      - name: Michael Gintz
+      - name: Matthew Kortje
+      - name: Megan Laurance
+      - name: Zili Wang
+        self: true
+      - name: Yong Yang
+    venue: Communications in Algebra, vol. 50, pp. 3932–3939, 2022.
+    doi: https://doi.org/10.1080/00927872.2022.2049807
+    abstract: >-
+      The paper studies character codegrees as invariants of finite groups. It proves that the codegree sets of selected non-abelian simple groups, including PSL(3,3), determine those groups up to isomorphism.
+    bibtex: |-
+      @article{GintzEtAl2022SimpleGroupsCodegrees,
+        author  = {Michael Gintz and Matthew Kortje and Megan Laurance and Zili Wang and Yong Yang},
+        title   = {On the Characterization of Some Non-abelian Simple Groups with Few Codegrees},
+        journal = {Communications in Algebra},
+        volume  = {50},
+        pages   = {3932--3939},
+        year    = {2022},
+        doi     = {10.1080/00927872.2022.2049807}
+      }
+
+  - id: set-orbits-group-order-2022
+    year: "2022"
+    title: The Number of Set Orbits of Permutation Groups and the Group Order
+    area: Group theory
+    authors:
+      - name: Michael Gintz
+      - name: Thomas Keller
+      - name: Matthew Kortje
+      - name: Megan Laurance
+      - name: Zili Wang
+        self: true
+      - name: Yong Yang
+    venue: Bulletin of the Australian Mathematical Society, vol. 106, pp. 89–101, 2022.
+    doi: https://doi.org/10.1017/S0004972721001064
+    abstract: >-
+      A permutation group acting on a finite set also acts on its power set, producing a number of set orbits that is useful in bounding conjugacy classes. This paper determines the optimal ratio between the logarithms of the number of set orbits and the group order when large alternating composition factors are excluded.
+    bibtex: |-
+      @article{GintzEtAl2022SetOrbitsGroupOrder,
+        author  = {Michael Gintz and Thomas Keller and Matthew Kortje and Megan Laurance and Zili Wang and Yong Yang},
+        title   = {The Number of Set Orbits of Permutation Groups and the Group Order},
+        journal = {Bulletin of the Australian Mathematical Society},
+        volume  = {106},
+        pages   = {89--101},
+        year    = {2022},
+        doi     = {10.1017/S0004972721001064}
+      }
