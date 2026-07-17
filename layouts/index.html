@@ -51,12 +51,16 @@
   </header>
 
   <main id="main">
-    <section class="hero shell" aria-labelledby="hero-title">
+    <section class="hero shell" id="about" aria-labelledby="hero-title">
       <div class="hero__copy">
-        <p class="eyebrow"><span></span> Formal methods · AI · Temporal logic</p>
         <h1 id="hero-title">Zili <em>Wang.</em></h1>
         <p class="hero__native" lang="zh">汪自立</p>
-        <p class="hero__lede">I build practical tools for formal methods and prove the algorithms behind them correct.</p>
+
+        <div class="hero__about">
+          <p>I’m a fourth-year Computer Science PhD student at <a href="{{ site.Data.profile.iowa_state }}" target="_blank" rel="noopener noreferrer">Iowa State University</a>, advised by <a href="{{ site.Data.profile.advisor }}" target="_blank" rel="noopener noreferrer">Kristin Yvonne Rozier</a> in the <a href="{{ site.Data.profile.lab }}" target="_blank" rel="noopener noreferrer">Laboratory for Temporal Logic</a>.</p>
+          <p>My research sits at the intersection of formal methods and artificial intelligence. I develop tools and algorithms for temporal logic, with a particular focus on specification elicitation and validation, and formally verify key algorithms in Isabelle/HOL.</p>
+          <p>I’m supported by a <a href="{{ site.Data.profile.grfp }}" target="_blank" rel="noopener noreferrer">National Science Foundation Graduate Research Fellowship</a> (awarded 2024). Before Iowa State, I earned a double-major B.A. in Computer Science and Mathematics from <a href="{{ site.Data.profile.berkeley }}" target="_blank" rel="noopener noreferrer">UC Berkeley</a>.</p>
+        </div>
 
         <div class="socials" aria-label="Contact and research profiles">
           <a class="social-link social-link--email" href="mailto:{{ site.Data.profile.email }}" aria-label="Email Zili Wang" title="Email">
@@ -84,30 +88,14 @@
           Fourth-year PhD student · Cedar Rapids, Iowa
         </figcaption>
       </figure>
-    </section>
 
-    <section class="about section shell" id="about" aria-labelledby="about-title">
-      <div class="section-label">About</div>
-      <div class="about__content">
-        <h2 id="about-title">Making formal methods more usable—and more trustworthy.</h2>
-        <div class="about__grid">
-          <div>
-            <p>I’m a fourth-year Computer Science PhD student at <a href="{{ site.Data.profile.iowa_state }}" target="_blank" rel="noopener noreferrer">Iowa State University</a>, advised by <a href="{{ site.Data.profile.advisor }}" target="_blank" rel="noopener noreferrer">Kristin Yvonne Rozier</a> in the <a href="{{ site.Data.profile.lab }}" target="_blank" rel="noopener noreferrer">Laboratory for Temporal Logic</a>.</p>
-            <p>My research sits at the intersection of formal methods and artificial intelligence. I develop tools and algorithms for temporal logic, with a particular focus on specification elicitation and validation, and formally verify key algorithms in Isabelle/HOL.</p>
-          </div>
-          <div>
-            <p>I’m supported by a <a href="{{ site.Data.profile.grfp }}" target="_blank" rel="noopener noreferrer">National Science Foundation Graduate Research Fellowship</a> (awarded 2024). Before Iowa State, I earned a double-major B.A. in Computer Science and Mathematics from <a href="{{ site.Data.profile.berkeley }}" target="_blank" rel="noopener noreferrer">UC Berkeley</a>.</p>
-          </div>
-        </div>
-
-        <div class="experience" aria-label="Previous internships">
-          <span class="experience__label">Previous internships</span>
-          <ul>
-            <li>NASA</li>
-            <li>Amazon</li>
-            <li>Collins Aerospace</li>
-          </ul>
-        </div>
+      <div class="experience" aria-label="Previous internships">
+        <span class="experience__label">Previous internships</span>
+        <ul>
+          <li>NASA</li>
+          <li>Amazon</li>
+          <li>Collins Aerospace</li>
+        </ul>
       </div>
     </section>
 
