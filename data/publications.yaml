@@ -1,26 +1,33 @@
 computer_science:
   - id: mltl-ecosystem-isola-2026
     year: "2026"
-    title: An Integrated Ecosystem for Mission-time LTL Specification Elicitation and Validation
+    title: An Integrated Ecosystem for Mission-Time LTL Specification Elicitation and Validation
     area: Formal methods
     authors:
       - name: Zili Wang
         self: true
-      - name: Alec Rosentrater
+      - name: Alec E. Rosentrater
       - name: Alexis Aurandt
       - name: Christopher Johannsen
       - name: Kristin Yvonne Rozier
-    venue: Accepted to the International Symposium on Leveraging Applications of Formal Methods, Verification and Validation (ISoLA), 2026.
-    doi_status: DOI forthcoming
+    venue: Published in ISoLA 2026, Lecture Notes in Computer Science, vol. 17145, pp. 148–179. Springer, 2027; first online October 17, 2026.
+    doi: https://doi.org/10.1007/978-3-032-40124-3_8
     abstract: >-
       This work presents an integrated ecosystem for eliciting and validating Mission-time Linear Temporal Logic specifications. It brings complementary tools and workflows together so that users can move from informal requirements to formal specifications and check that those specifications capture the intended behavior.
     bibtex: |-
       @inproceedings{WangEtAl2026MLTLEcosystem,
-        author    = {Zili Wang and Alec Rosentrater and Alexis Aurandt and Christopher Johannsen and Kristin Yvonne Rozier},
-        title     = {An Integrated Ecosystem for Mission-time {LTL} Specification Elicitation and Validation},
-        booktitle = {International Symposium on Leveraging Applications of Formal Methods, Verification and Validation},
-        year      = {2026},
-        note      = {Accepted}
+        author    = {Zili Wang and Alec E. Rosentrater and Alexis Aurandt and Christopher Johannsen and Kristin Yvonne Rozier},
+        title     = {An Integrated Ecosystem for Mission-Time {LTL} Specification Elicitation and Validation},
+        editor    = {Tiziana Margaria and Bernhard Steffen},
+        booktitle = {Leveraging Applications of Formal Methods, Verification and Validation. Scalable Verification and Validation of Concurrent and Distributed Systems},
+        series    = {Lecture Notes in Computer Science},
+        volume    = {17145},
+        pages     = {148--179},
+        publisher = {Springer},
+        address   = {Cham},
+        year      = {2027},
+        doi       = {10.1007/978-3-032-40124-3_8},
+        note      = {ISoLA 2026; first online October 17, 2026}
       }
     resources:
       - label: MLTL Ecosystem
